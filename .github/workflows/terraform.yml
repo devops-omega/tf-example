@@ -51,3 +51,10 @@ jobs:
       
     - name: check generated file
       run: ls -l
+      
+    - name: commit the file
+      run: |
+        git status
+        git add .
+        git commit -m "generated files"
+        git push origin main
